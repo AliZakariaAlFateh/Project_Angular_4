@@ -1,0 +1,184 @@
+<<<<<<< HEAD:Angular_Project_Day4/src/app/Components/side-bar/side-bar.component.html
+
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark d-sm-block d-none">
+            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <span class="fs-5 d-none d-sm-inline">Menu</span>
+                </a>
+                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link align-middle px-0">
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline text-white">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle text-white">
+                            <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span> </a>
+                        <ul class="collapse show nav flex-column ms-1 " id="submenu1" data-bs-parent="#menu">
+                            <li class="w-100">
+                                <a href="#" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline ">Item</span> 1 </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">Item</span> 2 </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline text-white">Orders</span></a>
+                    </li>
+                    <li>
+                        <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
+                            <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline text-white">Bootstrap</span></a>
+                        <ul class="collapse nav flex-column ms-1 " id="submenu2" data-bs-parent="#menu">
+                            <li class="w-100">
+                                <a href="#" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">Item</span> 1</a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">Item</span> 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle text-white">
+                            <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Products</span> </a>
+                            <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                            <li class="w-100">
+                                <a href="#" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">Product</span> 1</a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">Product</span> 2</a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">Product</span> 3</a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">Product</span> 4</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link px-0 align-middle text-white">
+                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Customers</span> </a>
+                    </li>
+                </ul>
+                <hr>
+                <div class="dropdown pb-4">
+                    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img  src="assets/Images/Ali.PNG" alt="hugenerd" width="70" height="70" class="rounded-circle">
+                        <!-- src="https://github.com/mdo.png" -->
+                        <span class="d-none d-sm-inline mx-1">user</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                        <li><a class="dropdown-item text-white" href="#">New project...</a></li>
+                        <li><a class="dropdown-item text-white" href="#">Settings</a></li>
+                        <li><a class="dropdown-item text-white" href="#">Profile</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col overflow-y-scroll" [class.content]="BoolClass" [ngClass]="{content:!BoolClass,classBorder:BoolClass,'text-small':BoolClass}">
+            <hr>
+           
+           
+           
+            <hr>
+            <!--                                             Lab Day 4 In Angular                                       -->
+            <!-- Pass Data From Child To Parent .....-->
+            <h4 class="text-center">Lab 4 Add Product </h4>
+            <h5 class="text-center">In This Lab Done Using Interface and Pass Data From Child To Another Child</h5>
+            <!-- Parent For FromValidation Is side-bar -->
+
+
+
+
+            <!-- 
+                --DataRecievedFromChild-- is a variable inside Parent(Student)
+                I recieved the data sent from child inside it and display it here ...
+            -->
+            {{DataRecievedFromChild}}
+    
+            <!-- 
+                Send DataRecievedFromChild Afrer Recieve it from  Child(student-child2) 
+               Here in side Parent(Student) Now We Send Data To Another Child  
+               but RecieveDataFromChild2ByStudentParent must be an @Input
+            -->
+
+
+            
+            <!-- //from Parent -->
+            {{array_Product}} 
+            <!-- //Recieve Data From Child (form-validation) and Set It inside Parernt(side-bar) at array (array_Product) -->
+            <app-form-validation (MyEventForAddProduct)="GetData($event)"></app-form-validation>
+            <hr>
+            <!-- <h4>Pass Data From Child Child(student-child2) To another child  Child(student-child3)</h4> -->
+            <!-- Catch array_Product From parent(side-bar) and Send It to next Child (display-product-after-inserted)
+              Then I Can Show all Data Inside Componetnt Child(display-product-after-inserted) by assign 
+              [RecieveDataFromChild2ByStudentParent]="array_Product"
+            -->
+            <app-display-product-after-inserted [RecieveDataFromChild2ByStudentParent]="array_Product"></app-display-product-after-inserted>
+        
+        </div>
+    </div>
+</div>
+=======
+<div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark h-100" >
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+      <span class="fs-4">Sidebar</span>
+    </a>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        <a href="#" class="nav-link active" aria-current="page">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link text-white">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
+          Dashboard
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link text-white">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
+          Orders
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link text-white">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+          Products
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link text-white">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
+          Customers
+        </a>
+      </li>
+    </ul>
+    <hr>
+    <div class="dropdown">
+      <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+        <strong>mdo</strong>
+      </a>
+      <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+        <li><a class="dropdown-item" href="#">New project...</a></li>
+        <li><a class="dropdown-item" href="#">Settings</a></li>
+        <li><a class="dropdown-item" href="#">Profile</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Sign out</a></li>
+      </ul>
+    </div>
+  </div>
+>>>>>>> e5ff20f92e6072a5401ea19cc28303343c973ed5:Angular_Project/src/app/Components/side-bar/side-bar.component.html

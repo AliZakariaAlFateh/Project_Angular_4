@@ -1,0 +1,14 @@
+<!-- <p>display-product-after-inserted works!</p> -->
+<div class="row g-2 mb-1" *ngFor="let items of RecieveDataFromChild2ByStudentParent;let i=index">
+    <form (submit)="Delete(i)" class="row g-3">
+        <div class="col-md-3">
+           <input type="text" class="form-control"name="name" placeholder="Enter Your Text" value="{{items.Product_Name}}">
+        </div>
+        <div class="col-md-3">
+           <input type="text" class="form-control"name="name" placeholder="Enter Your Text" value="{{items.Product_Price}}">
+        </div>
+        <div class="col-md-4">
+           <input type="submit" class="form-control"value="Delete" class="btn btn-danger ml-3">
+        </div>
+    </form>
+  </div>
